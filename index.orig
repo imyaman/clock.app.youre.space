@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Web On and Off</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css" />
+<link rel="icon" href="onandoff_626x626.jpg">
+</head>
+
+<body>
+
+<div data-role="page" id="page1">
+  <div data-theme="a" data-role="header">
+    <h3>Web On and Off</h3>
+  </div>
+  <div data-role="content"  data-content-theme="b">
+  <!-- my content -->
+
+  <div id="toucharea" style="text-align: center;">
+    <br> <br>
+    <div id="showon" style="font-size:10em;">ON</div>
+    <div id="showoff" style="font-size:10em;">OFF</div>
+    <br> <br>
+  </div>
+    <br> <br>
+    <br> <br>
+    <br> 
+
+  <!-- my content -->
+
+<center>
+<div class="main_banner" id="main_banner1">
+  <script type="text/javascript"> var tad_conf = { targetId : 'main_banner1', clientId : 'MX00048A1', slotNo : 2 }; </script>
+  <script type="text/javascript" src="http://adddn.adotsolution.com/contents/sdk/js/tad.min.js"></script>
+</div>
+</center>
+
+  </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+
+<script>
+
+var i=0;
+var j=0;
+
+$("#showon").hide();
+
+
+$("#toucharea").click(function(){
+  i=i+1;
+  j=i%2;
+  console.log(i + " " + j);
+  if(j){
+    console.log("odd");
+    $("#showon").show();
+    $("#showoff").hide();
+  } else {
+    console.log("even");
+    $("#showoff").show();
+    $("#showon").hide();
+  }
+});
+
+
+
+</script>
+
+
+</body>
+</html>
